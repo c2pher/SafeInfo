@@ -1,22 +1,18 @@
 import tkinter as tk
 
-def melo10():
-    verify = input("Enter the passcode: ")
-    infos = '''
-    1-Instagram: xxx - aaa
-    2-Facebook: xxx - bbb
-    3-Google: vvv - yzs
+def enter():
+    verify = text_pass.get(1.0, "end-1c")
+    info = '''
+    Your important info will come here
     '''
-    if verify == '1278melo':
+    if verify == 'yourpasscode':
         window = tk.Tk()
         window.geometry("500x400")
         window.title("Info")
         window.config(padx=10, pady=10)
-        title = tk.Label(window, text=infos)
+        title = tk.Label(window, text=info)
         title.config(font=("Arial", 18))
         title.pack(padx=10, pady=30)
-    else:
-        print('ACCESS DENIED')
 
 pencere = tk.Tk()
 pencere.geometry("700x500")
@@ -35,7 +31,7 @@ text_pass = tk.Text(pencere, height=1)
 text_pass.config(font=("Arial",20))
 text_pass.pack(padx=100, pady=10)
 
-btn_load = tk.Button(pencere, text="Login", command=melo10)
+btn_load = tk.Button(pencere, text="Login", command=enter)
 btn_load.config(font=("Arial",20))
 btn_load.pack(padx=10, pady=10)
 
